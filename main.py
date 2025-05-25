@@ -4,15 +4,14 @@ import asyncio
 import os
 from datetime import datetime
 from discord.ext import commands
-from dotenv import load_dotenv
 
-load_dotenv()
+# No load_dotenv() — we get env vars directly from Railway environment
 
-TOKEN = os.getenv("DISCORD_TOKEN")
-CHANNEL_ID = int(os.getenv("CHANNEL_ID"))
+TOKEN = os.environ["DISCORD_TOKEN"]
+CHANNEL_ID = int(os.environ["CHANNEL_ID"])
 
 intents = discord.Intents.default()
-intents.message_content = True  # This enables reading message content
+intents.message_content = True  # Enable reading message content
 
 bot = commands.Bot(command_prefix=".", intents=intents)
 
