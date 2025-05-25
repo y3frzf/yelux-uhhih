@@ -5,7 +5,7 @@ import os
 from datetime import datetime
 from discord.ext import commands
 
-# No load_dotenv() — we get env vars directly from Railway environment
+# No load_dotenv() — we get env vars directly from Railway environmen
 
 TOKEN = os.environ["DISCORD_TOKEN"]
 CHANNEL_ID = int(os.environ["CHANNEL_ID"])
